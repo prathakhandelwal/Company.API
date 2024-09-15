@@ -1,4 +1,6 @@
 ﻿using Company.Application.Service;
+using Company.Application.UseCase.AddUnitCompany;
+using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
@@ -13,6 +15,7 @@ namespace Company.Application.Extension
         public static IServiceCollection ConfigureApplication
             (this IServiceCollection services) 
         {
+            services.AddTransient<IValidator<AddUnitCompanyCommand>, AddUnitCompanyCommandValidator>();
             foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())
             {
                 services.AddMediatR(cfg =>
