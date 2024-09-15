@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+message UnitCompany {
+  int32 Id = 1;
+  string Name = 2;
+  string Exchange=3;
+  string Ticker=4;
+  string Isin=5;
+  optional string Website=6;
+}

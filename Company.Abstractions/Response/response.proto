@@ -1,0 +1,18 @@
+syntax = "proto3";
+import "Model/model.proto";
+
+message AddUnitCompanyResponse{
+	 int32 Id = 1;
+}
+
+message UpdateUnitCompanyResponse{
+	 bool IsUpdate = 1;
+}
+
+message GetAllCompanyResponse{
+	repeated UnitCompany items =1;
+}
+
+message GetUnitCompanyResponse{
+	 UnitCompany item =1;
+}

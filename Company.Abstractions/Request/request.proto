@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+message AddUnitCompanyRequest{
+  string Name = 2;
+  string Exchange=3;
+  string Ticker=4;
+  string Isin=5;
+  optional string Website=6;
+}
+
+message UpdateUnitCompanyRequest{
+  int32 Id = 1;
+  string Name = 2;
+  string Exchange=3;
+  string Ticker=4;
+  string Isin=5;
+  optional string Website=6;
+}
+
+message GetAllCompanyRequest{	
+}
+
+message GetUnitCompanyByIdRequest{
+	int32 Id =1;
+}
+
+message GetUnitCompanyByIsinRequest{	
+	string Isin = 1;
+}
