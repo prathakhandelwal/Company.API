@@ -1,5 +1,6 @@
 # Company.API
 Run the Company.API as Startup project to run the APIs. Use Swagger UI to utilise the API calls. 
+http://localhost:5001/swagger/index.html
 
 # Database Script - SqlServer 
 IF db_id('companydb') IS NULL 
